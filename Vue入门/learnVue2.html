@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue学习：起步2</title>
+  </head>
+  <body>
+    <div id="box2">
+      <span :title="message">鼠标悬停几秒钟查看此处信息</span>
+    </div>
+
+    <script src="../vue.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    let box2 = new Vue({
+      el:"#box2",
+      data:{
+        message:"页面记载于" + new Date().toLocaleString()
+      }
+    })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue学习：起步3</title>
+  </head>
+  <body>
+    <div id="box">
+      <p v-if="seen">现在你看到我了</p>
+      <input id="btn" type="button" value="改变">
+      <input id="btn2" type="button" value="改变2">
+    </div>
+
+    <script src="../vue.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    let box3 = new Vue({
+      el:"#box",
+      data:{
+        seen:true
+      }
+    })
+
+    btn.onclick = function () {
+      box3.seen = false;
+    }
+
+    btn2.onclick = function () {
+      box3.seen = true;
+    }
+    // 当我们改变v-if的值的时候，在控制台我们可以看到p标签被直接删除掉了；所以我们可以得知v-if的值的改变会导致绑定的元素的值消失；
+    </script>
+  </body>
+</html>

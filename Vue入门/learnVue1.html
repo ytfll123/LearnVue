@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue学习：起步1</title>
+</head>
+<body>
+    <div id="box">{{message}}</div>
+
+    <script src="../vue.js"></script>
+    <script type="text/javascript">
+      let box = new Vue({
+        el:"#box",
+        data:{
+          message:"hello world"   //可以得知模板通过Vue对象中的data数据来渲染页面
+        }
+      })
+
+      console.log(box);         //当我们打印出box实例时，可以看到绑定有相应的#box节点，和对应的message
+
+      box.message = "Hello";     //当我们改变box实例上绑定的message数据的时候，会发现页面中的数据也随之变换，这应该就是Vue所说的响应式设计
+    </script>
+</body>
+</html>

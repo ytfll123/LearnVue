@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue学习：起步4</title>
+  </head>
+  <body>
+    <div id="box">
+      <ol>
+        <li v-for="item in list">{{item.text}}</li>
+      </ol>
+      <ul>
+        <li v-for="item,index in list">{{index+1}}{{item.text}}</li>
+      </ul>
+    </div>
+
+    <script src="../vue.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    let box4 = new Vue({
+      el:"#box",
+      data:{
+        list:[
+          {text:"我要学习JS"},
+          {text:"我要学习Vue"},
+          {text:"我要做项目"}
+        ]
+      }
+    })
+    /*
+    Vue中的自带指令v-for可以利用data数据中的数组来渲染项目，v-for会循环data数组来渲染你的页面，数组中有多少条数据就会渲染多少行的li，v-for可以接受两个参数，第一个参数是指数组的每一个数据，第二个参数是数组的下标，但是数组下标是从0开始的；
+    */
+    </script>
+  </body>
+</html>
