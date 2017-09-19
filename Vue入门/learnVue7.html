@@ -5,7 +5,27 @@
     <title>Vue学习：起步7</title>
   </head>
   <body>
-    
+    <div id="box">
+      <input type="text" name="" :value="message">
+      <input type="text" name="" value="" v-model="message">
+      <p>{{message}}</p>
+    </div>
+
     <script src="../vue.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      let box7 = new Vue({
+        el:"#box",
+        data:{
+          message:"Hello World"
+        }
+      })
+
+      //box7.message = "Hello"
+      // Vue中的v-model指令提供给了我们双向数据绑定的操作，我们可以利用v-model实现数据的相互绑定。
+
+      /*
+        重点  vue中绑定数据的方式有两种  一是v-bind，二是v-model，二者之间的区别在于v-bind的绑定是单向绑定，而v-model实现的是双向绑定；
+      */
+    </script>
   </body>
 </html>
