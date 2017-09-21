@@ -5,8 +5,23 @@
     <title>Vue学习：起步8</title>
   </head>
   <body>
+    <ol>
+      <!-- 创建一个 todo-item 组件的实例 -->
+      <todo-item></todo-item>
+    </ol>
 
     <script src="../vue.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    Vue.component('todo-item', {
+      //利用component来注册一个组件，component可以接收两个参数  第一个是所建立的组件标签名，第二个是个对象，里边包含有template,表示所创建的组件的内部结构，切记组件中只能有一个根元素，不能出现多个根元素
+      template: '<li>这是个待办项</li>'
+    })
 
+    let box8 = new Vue({
+      el:"ol"
+    })
+
+    // 重点，  当我们创建完组件之后，必须启动Vue，并指定el(挂载节点);
+    </script>
   </body>
 </html>
